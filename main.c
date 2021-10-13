@@ -11,6 +11,7 @@ int main()
 {
     FILE* output;
     int choice;
+    int printstring;
     unsigned long long int x;
     unsigned int steps;
     char input[30]; // Input.
@@ -43,13 +44,19 @@ int main()
             }
         }
 
-
         printf("> Input: ");
         scanf("%s", input); //Gets the input
+        printf("> Activate print of all numbers? (Will slow down a lot), 0 or 1: ");
+        scanf("%d", &printstring); //Gets the input
         toInt(input, &y); //Turns the input into a number (needed for 64bit+ numbers inputted).
         while(k < l)
         {
            steps = CollatzConjecture(y, cache, maxCache-1);
+            if(printstring == 1)
+           {
+               tostring(input,y);
+               printf("I: %s, S: %u\n", input, steps);
+           }
            y = y + 1;
            k++;
            //printf("S: %d\n", steps);
