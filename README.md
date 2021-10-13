@@ -12,5 +12,5 @@ Otherwise, you will need to change some things:
 - It uses 8 GB because of the Cache process, it is Memory Allocated x Size of Byte Type. I'm using a Short Int to store the steps, so 2 bytes (Total: 8GB), can store up to 2^32 numbers.
 - If you change to half the size (4GB), go to the #define loopSize and change that to 31.
 - Don't guarantee it will work for lower sizes...
-- The program minimum run is 2^16, you can change that at l (It goes only to inputu64-1).
+- The program minimum run is 2^16, you can change that at main.c unsigned long long int l. (It goes only to inputu64-1).
 - You can also just run the manual mode (No Cache), just select option 1.
