@@ -14,11 +14,13 @@
 #include <inttypes.h>
 #include <string.h>
 
+
+#define loopSize 32
 #define sizeofInt 2
 #define inputu16 65536
 #define inputu32 4294967296
 #define inputu64 18446744073709551616
-#define maxCache 4294967297 //Goes by memory really... It's GB (in bytes) divided by the bytes of the type of int (so short = 2.)
+#define maxCache 4294967296 //Goes by memory really... It's in bytes.
 
 typedef unsigned __int128 uint128;
 

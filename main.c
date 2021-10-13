@@ -28,19 +28,19 @@ int main()
     if(choice == 2)
     {
         memset(input,0, 30); //Sets the input to 0
-        cache = (int*)malloc(maxCache * sizeofInt); //Size of Short Int is 2 bits.
+        cache = (int*)malloc((maxCache+1) * sizeofInt); //Size of Short Int is 2 bits.
 
         //Pre-Cache step 1: Initializing Cache
         memset(cache, 0, maxCache);
         //Pre-Cache step 2: All 2^n (up to 32 bits in this case).
-        for(x = 0; x < 33; x++)
+        for(x = 0; x < loopSize + 1; x++)
         {
             if(x == 0) { cache[preCache] = 0; }
-            else if (x == 32) { cache[inputu32] = 32; }
             else
             {
                 preCache = preCache * 2;
                 cache[preCache] = x;
+                printf("%llu\n", preCache);
             }
         }
 
