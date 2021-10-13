@@ -40,7 +40,6 @@ int main()
             {
                 preCache = preCache * 2;
                 cache[preCache] = x;
-                printf("%llu\n", preCache);
             }
         }
 
