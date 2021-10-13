@@ -2,12 +2,16 @@
 Collatz Conjecture Written in pure C.
 Wikipedia Article: https://en.wikipedia.org/wiki/Collatz_conjecture
 
-To use as it is, make sure you have at least 8GB of free RAM avaliable, otherwise, it's going to crash.
-Check that you also have support for a 128 Intager type on your machine (If your processor is a x64 processor, you are probably fine). It uses 128 bit intagers (So it can go very far, i would not recommend going past 2^124 because the way the Conjecture works).
+# Requirements: 
+- x64 Processor (x86_x64 one used in the making).
+- 8 GB Free RAM (To use it's automatic mode as it is).
+- It uses 128 bit intagers (So it can go very far, i would not recommend going past 2^120 because the way the Conjecture works).
 
 Otherwise, you will need to change some things:
-- Change the Cache size (maxCache) in Collatz.h from 4294967297 (4GB) into half of that.
-- It uses 8 GB because of the Cache process, it is Memory Allocated x Size of Byte Type. I'm using a Short Int to store the steps, so 2 bytes (Total: 8 GB), can store up to 2^32 numbers.
-- You can change to half of the Cache size (storing 2^31 words at most), after that, just go on Main.c, change the Pre-cache info from x < 33 to x < 32.
+- Change the Cache size (maxCache) in Collatz.h from 4294967296 Bytes (8GB) to other number (2147483648 for 4GB) | (1073741824 for 2 GB) | (536870912 for 1 GB).
+- It uses 8 GB because of the Cache process, it is Memory Allocated x Size of Byte Type. I'm using a Short Int to store the steps, so 2 bytes (Total: 8GB), can store up to 2^32 numbers.
+- If you change to half the size (4GB), go to the #define loopSize and change that to 31.
+- If you change to 1/4 the size (2GB), go to the #define loopSize and change that to 30.
+- If you change to 1/8 the size (1GB), go to the #define loopSize and change that to 29.
 - The program minimum run is 2^16, so it's not very big in memory at that point (Just some MBs).
 - You can also just run the manual mode (No Cache), just select option 1.
