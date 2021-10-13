@@ -8,6 +8,7 @@ The Memoization (Cache) stores the first 2^32 numbers in the normal 8GB numbers.
 - x64 Processor (x86_x64 one used in the making).
 - 8 GB Free RAM (To use it's automatic mode as it is).
 - It uses 128 bit intagers (So it can go very far, i would not recommend going past 2^120, glitches/overflown could happen).
+- Make a folder called io for the program to dump it's file... it does not make alone for some reason... To tired to implement doing folders by itself.
 
 Otherwise, you will need to change some things:
 - Change the Cache size (maxCache) in Collatz.h from 4294967296 Bytes (8GB) to other number (2147483648 for 4GB) | (1073741824 for 2 GB) | (536870912 for 1 GB).
