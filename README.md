@@ -11,5 +11,6 @@ Otherwise, you will need to change some things:
 - Change the Cache size (maxCache) in Collatz.h from 4294967296 Bytes (8GB) to other number (2147483648 for 4GB) | (1073741824 for 2 GB) | (536870912 for 1 GB).
 - It uses 8 GB because of the Cache process, it is Memory Allocated x Size of Byte Type. I'm using a Short Int to store the steps, so 2 bytes (Total: 8GB), can store up to 2^32 numbers.
 - If you change to half the size (4GB), go to the #define loopSize and change that to 31.
-- The program minimum run is 2^16, so it's not very big in memory at that point (Just some MBs).
+- Don't guarantee it will work for lower sizes...
+- The program minimum run is 2^16, you can change that at l (It goes only to inputu64-1).
 - You can also just run the manual mode (No Cache), just select option 1.
